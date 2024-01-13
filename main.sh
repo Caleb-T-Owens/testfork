@@ -4,27 +4,9 @@ echo "Starting sherman"
 source $HOME/sherman-the-shell-config/constants.sh
 source $SHERMAN/utils.sh
 source $SHERMAN/reload.sh
-
-# Existing config
-export EDITOR='nvim'
-source "$HOME/.cargo/env"
-export PATH="/opt/homebrew/opt/bison/bin:$PATH"
-export PATH="/Users/calebowens/bin:$PATH"
-export PATH="/Users/calebowens/.yarn/bin:$PATH"
-export PATH="/opt/homebrew/Cellar/jemalloc/5.3.0/bin:$PATH"
-export PATH="/opt/homebrew/opt/gradle@7/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-
-# My interesting stuff
-alias tx='tmuxinator'
-
-# Docker aliases
-alias dcu="docker compose up"
-alias dcd="docker compose down"
-alias dce="docker compose exec"
-alias dcr="docker compose run"
+source $SHERMAN/aliases.sh
+source $SHERMAN/private_aliases.sh
+source $SHERMAN/programmes.sh
 
 function gnb() {
   local ORIGIN="origin/main"
@@ -37,9 +19,6 @@ function gnb() {
   git push -u origin $1
 }
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 function dbash() {
   while true
@@ -101,8 +80,3 @@ function diff_pr() {
   git diff --staged $FORKPOINT --stat
   git diff --staged $FORKPOINT
 }
-
-alias tymstaging="cx ssh -s 'teachmonster OOG' -e staging gecko"
-alias tymprod="cx ssh -s 'teachmonster OOG' -e production cougar"
-
-alias rip="rip --graveyard ~/.local/share/Trash"
