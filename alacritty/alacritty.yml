@@ -1,0 +1,87 @@
+# Colors (Gruvbox dark)
+
+dpi:
+  x: 96.0
+  y: 96.0
+
+# (Github Light Colorblind) Colors for Alacritty
+
+colors:
+  # Default colors
+  primary:
+    background: '0xffffff'
+    foreground: '0x1b1f24'
+
+  # Cursor colors
+  #
+  # These will only be used when the `custom_cursor_colors` field is set to `true`.
+  cursor:
+    text: '0xffffff'
+    cursor: '0x24292f'
+
+  # Normal colors
+  normal:
+    black: '0x24292f'
+    red: '0xb35900'
+    green: '0x0550ae'
+    yellow: '0x4d2d00'
+    blue: '0x0969da'
+    magenta: '0x8250df'
+    cyan: '0x1b7c83'
+    white: '0x6e7781'
+
+  # Bright colors
+  bright:
+    black: '0x57606a'
+    red: '0x8a4600'
+    green: '0x0969da'
+    yellow: '0x633c01'
+    blue: '0x218bff'
+    magenta: '0x8250df'
+    cyan: '0x1b7c83'
+    white: '0x6e7781'
+
+window:
+  dynamic_padding: true
+
+font:
+  size: 26.0
+
+  normal:
+    family: Hack Nerd Font Mono
+
+  # Bold font face
+  #bold:
+    # Font family
+    #
+    # If the bold family is not specified, it will fall back to the
+    # value specified for the normal font.
+    #family: monospace
+
+    # The `style` can be specified to pick a specific face.
+    #style: Bold
+
+  # Italic font face
+  #italic:
+    # Font family
+    #
+    # If the italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    #family: monospace
+
+    # The `style` can be specified to pick a specific face.
+    #style: Italic
+
+  # Bold italic font face
+  #bold_italic:
+    # Font family
+    #
+    # If the bold italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    #family: monospace
+
+    # The `style` can be specified to pick a specific face.
+    #style: Bold Italic
+
+key_bindings:
+  - { key: Key3,     mods: Alt,     chars: "#"                        }

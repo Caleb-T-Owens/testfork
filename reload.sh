@@ -20,4 +20,12 @@ function sherman_reload() {
   cp -r $SHERMAN/tmuxinator $HOME/.config/tmuxinator
   echo "Copying private tmuxinator configs"
   cp $SHERMAN/private_tmuxinator/* $HOME/.config/tmuxinator
+
+  sherman_heading "Reloading alacritty config"
+  echo "Removing alacritty folder"
+  rm -r $HOME/.config/alacritty
+  echo "Copying alacritty"
+  cp -r $SHERMAN/alacritty $HOME/.config/alacritty
+
+  sherman_heading "Reload complete!"
 }
