@@ -27,5 +27,11 @@ function sherman_reload() {
   echo "Copying alacritty"
   cp -r $SHERMAN/alacritty $HOME/.config/alacritty
 
+  sherman_heading "Reloading puma-dev config"
+  echo "Removing puma-dev folder"
+  rm -r $HOME/.puma-dev
+  echo "Copying puma_dev"
+  cp -a $SHERMAN/puma_dev $HOME/.puma-dev
+
   sherman_heading "Reload complete!"
 }
