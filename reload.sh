@@ -12,4 +12,12 @@ function sherman_reload() {
   rm -r $HOME/.config/nvim
   echo "Copying nvim"
   cp -r $SHERMAN/neovim $HOME/.config/nvim
+
+  sherman_heading "Reloading tmuxinator config"
+  echo "Removing tmuxinator folder"
+  rm -r $HOME/.config/tmuxinator
+  echo "Copying tmuxinator"
+  cp -r $SHERMAN/tmuxinator $HOME/.config/tmuxinator
+  echo "Copying private tmuxinator configs"
+  cp $SHERMAN/private_tmuxinator/* $HOME/.config/tmuxinator
 }
