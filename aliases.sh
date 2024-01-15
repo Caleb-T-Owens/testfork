@@ -11,3 +11,5 @@ alias dcr="docker compose run"
 
 # Rip with bin configured
 alias rip="rip --graveyard ~/.local/share/Trash"
+
+alias vim="nvim"

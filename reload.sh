@@ -1,6 +1,15 @@
 # This is a utility to reload my shell configuration
 # Some tools like neovim may need closing and opening for configuration to take effect
+function clear_shermandir() {
+  sherman_heading "Clearing shermandir"
+
+  rm -r $SHERMAN/.sherman
+  mkdir $SHERMAN/.sherman
+}
+
 function sherman_reload() {
+  source /etc/zprofile
+
   sherman_heading "Reloading .zshrc"
   echo "Copying .zshrc"
   cp $SHERMAN/zshrc.sh ~/.zshrc
