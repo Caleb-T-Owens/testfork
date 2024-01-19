@@ -42,5 +42,11 @@ function sherman_reload() {
   echo "Copying puma_dev"
   cp -a $SHERMAN/puma_dev $HOME/.puma-dev
 
+  sherman_heading "Reloading tmux config"
+  echo "Removing tmux configuration"
+  rm $HOME/.tmux.conf
+  echo "Copying tmux configuration"
+  cp $SHERMAN/tmux/.tmux.conf $HOME/.tmux.conf
+
   sherman_heading "Reload complete!"
 }

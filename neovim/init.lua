@@ -156,14 +156,17 @@ vim.keymap.set('n', '<leader>x', '<cmd>tabonly|%bd|e#<cr>')
 vim.opt.colorcolumn = '120'
 
 -- Standardrb
---  vim.opt.signcolumn = "yes" -- otherwise it bounces in and out, not strictly needed though
---  vim.api.nvim_create_autocmd("FileType", {
---    pattern = "ruby",
---    group = vim.api.nvim_create_augroup("RubyLSP", { clear = true }), -- also this is not /needed/ but it's good practice 
---    callback = function()
---      vim.lsp.start {
---        name = "standard",
---        cmd = { "/Users/calebowens/.rbenv/versions/3.1.2/bin/standardrb", "--lsp" },
---      }
---    end,
---  })
+vim.opt.signcolumn = "no" -- otherwise it bounces in and out, not strictly needed though
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "ruby",
+  group = vim.api.nvim_create_augroup("RubyLSP", { clear = true }), -- also this is not /needed/ but it's good practice 
+  callback = function()
+    vim.lsp.start {
+      name = "standard",
+      cmd = { "sherman_standardrb", "--lsp" },
+    }
+  end,
+})
+
+-- Making my terninal look cooler
+vim.opt.laststatus = 1

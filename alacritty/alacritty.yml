@@ -48,7 +48,7 @@ font:
   size: 26.0
 
   normal:
-    family: Hack Nerd Font Mono
+    family: CommitMono-Dotted
 
   # Bold font face
   #bold:
