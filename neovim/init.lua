@@ -170,3 +170,6 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Making my terninal look cooler
 vim.opt.laststatus = 1
+
+-- Wrap markdown and comments at 120 columns
+vim.opt.textwidth = 120
