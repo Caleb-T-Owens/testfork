@@ -173,3 +173,6 @@ vim.opt.laststatus = 1
 
 -- Wrap markdown and comments at 120 columns
 vim.opt.textwidth = 120
+
+-- Tell vim where to find ruby
+vim.g.ruby_host_prog = 'sherman_neovim-ruby-host'

@@ -42,3 +42,6 @@ export PATH="$PATH:/Users/calebowens/Library/Application Support/JetBrains/Toolb
 
 # Added by OrbStack: command-line tools and integration
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
+# Sherman ruby to path
+source_sherman_ruby
