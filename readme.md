@@ -1,4 +1,4 @@
-# Sherman the shell config
+# Sherman the best shell config
 
 This is my personal shell configuration. Its probably not very useful for anyone else, but I thought I'd put it in
 version control with a way of loading it up.
