@@ -10,4 +10,4 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/sherman-the-shell-config/main.sh
+source $HOME/code/sherman-the-shell-config/main.sh
